@@ -1466,12 +1466,12 @@ body.is-preload #bg:before {
 	-ms-transition-delay: 0.25s;
 	transition-delay: 0.25s;
 	padding: 3rem 2rem;
-	height: calc(var(--vh, 1vh) * 100);
+	/* height: calc(var(--vh, 1vh) * 100); */
 	/* max-height: 40rem; */
 	/* overflow: hidden; */
 	display: flex;
 	flex-direction: column;
-	/* flex: 1; */
+	flex: 1;
 	align-items: center;
 	justify-content: center;
 }
