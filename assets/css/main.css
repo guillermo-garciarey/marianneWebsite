@@ -1860,6 +1860,7 @@ body.is-preload #footer {
 	position: relative;
 	box-shadow: none !important;
 	border-radius: 50%;
+	outline: none; /* Prevents outline on click */
 }
 
 .chevronbutton::before {
@@ -1869,9 +1870,17 @@ body.is-preload #footer {
 	border-right: 2px solid whitesmoke;
 	border-bottom: 2px solid whitesmoke;
 	transform: rotate(45deg);
-
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Removes hover and active effects */
+.chevronbutton:hover,
+.chevronbutton:focus,
+.chevronbutton:active {
+	background-color: transparent !important;
+	box-shadow: none !important;
+	outline: none !important;
 }
