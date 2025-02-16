@@ -8,6 +8,19 @@ document.querySelector(".chevronbutton").addEventListener("click", function () {
 	document.querySelector("#menuscreen").scrollIntoView({ behavior: "smooth" });
 });
 
+function updateVH() {
+	document.documentElement.style.setProperty(
+		"--vh",
+		`${window.innerHeight * 0.01}px`
+	);
+}
+
+// Set on load
+updateVH();
+
+// Update when window resizes (e.g., address bar hides)
+window.addEventListener("resize", updateVH);
+
 (function ($) {
 	var $window = $(window),
 		$body = $("body"),
