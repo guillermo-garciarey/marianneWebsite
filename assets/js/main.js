@@ -6,6 +6,11 @@
 
 document.querySelector(".chevronbutton").addEventListener("click", function () {
 	document.querySelector("#menuscreen").scrollIntoView({ behavior: "smooth" });
+
+	// Delay a tiny bit to ensure the scroll is complete, then adjust
+	setTimeout(() => {
+		window.scrollTo(0, 1); // Triggers a slight scroll to encourage hiding the address bar
+	}, 500);
 });
 
 (function ($) {
