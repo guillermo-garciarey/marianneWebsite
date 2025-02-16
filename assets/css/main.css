@@ -1686,7 +1686,7 @@ body.is-preload #header .content .inner {
 	padding: 4.5rem 2.5rem 1.5rem 2.5rem;
 	position: relative;
 	width: 40rem;
-	max-width: 100%;
+	max-width: 95%;
 	background-color: rgba(27, 31, 34, 0.85);
 	border-radius: 4px;
 	opacity: 0;
