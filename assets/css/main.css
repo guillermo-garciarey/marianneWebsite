@@ -1915,7 +1915,7 @@ body.is-preload #footer {
 	visibility: visible;
 }
 
-html,
+/* html,
 body {
-	overflow: hidden !important; /* Prevent scrolling */
-}
+	overflow: hidden !important; 
+} */

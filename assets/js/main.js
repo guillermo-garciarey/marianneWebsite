@@ -5,9 +5,9 @@
 */
 
 // Prevent scrolling on page load
-window.addEventListener("load", function () {
-	document.body.style.overflow = "hidden";
-});
+// window.addEventListener("load", function () {
+// 	document.body.style.overflow = "hidden";
+// });
 
 document.querySelector(".chevronbutton").addEventListener("click", function () {
 	const menu = document.querySelector("#menuscreen");
