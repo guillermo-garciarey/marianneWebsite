@@ -5,21 +5,29 @@
 */
 
 document.querySelector(".chevronbutton").addEventListener("click", function () {
-	document.querySelector("#menuscreen").scrollIntoView({ behavior: "smooth" });
+	const menu = document.querySelector("#menuscreen");
+
+	// Scroll instantly
+	menu.scrollIntoView({ behavior: "auto" });
+
+	// Add the 'active' class to trigger fade-in effect
+	setTimeout(() => {
+		menu.classList.add("active");
+	}, 50); // Small delay to ensure visibility transition works
 });
 
-function updateVH() {
-	document.documentElement.style.setProperty(
-		"--vh",
-		`${window.innerHeight * 0.01}px`
-	);
-}
+// function updateVH() {
+// 	document.documentElement.style.setProperty(
+// 		"--vh",
+// 		`${window.innerHeight * 0.01}px`
+// 	);
+// }
 
 // Set on load
-updateVH();
+// updateVH();
 
 // Update when window resizes (e.g., address bar hides)
-window.addEventListener("resize", updateVH);
+// window.addEventListener("resize", updateVH);
 
 (function ($) {
 	var $window = $(window),
