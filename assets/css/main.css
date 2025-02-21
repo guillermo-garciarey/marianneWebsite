@@ -1264,9 +1264,9 @@ button {
 			rgba(19, 21, 25, 0.5)
 		),
 		url("../../images/overlay.png");
-	background-size: auto, 256px 256px;
-	background-position: center, center;
-	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	z-index: 2;
 }
 
