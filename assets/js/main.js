@@ -23,18 +23,18 @@ document.querySelector(".chevronbutton").addEventListener("click", function () {
 	menu.classList.add("active");
 });
 
-// function updateVH() {
-// 	document.documentElement.style.setProperty(
-// 		"--vh",
-// 		`${window.innerHeight * 0.01}px`
-// 	);
-// }
+function updateVH() {
+	document.documentElement.style.setProperty(
+		"--vh",
+		`${window.innerHeight * 0.01}px`
+	);
+}
 
 // Set on load
-// updateVH();
+updateVH();
 
 // Update when window resizes (e.g., address bar hides)
-// window.addEventListener("resize", updateVH);
+window.addEventListener("resize", updateVH);
 
 (function ($) {
 	var $window = $(window),

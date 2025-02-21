@@ -1,9 +1,9 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
-/* :root {
+:root {
 	--vh: 1vh;
-} */
+}
 
 html,
 body,
@@ -1822,8 +1822,8 @@ body.is-preload #footer {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	height: 100vh;
-	/* height: calc(var(--vh, 1vh) * 100); */
+	/* height: 100vh; */
+	height: calc(var(--vh, 1vh) * 100);
 	scroll-snap-align: start;
 }
 
