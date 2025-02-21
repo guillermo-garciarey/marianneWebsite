@@ -6,13 +6,18 @@
 
 document.querySelector(".chevronbutton").addEventListener("click", function () {
 	const menu = document.querySelector("#menuscreen");
+	const content = document.querySelector(".content"); // Select the content div
 
 	// Scroll instantly
 	menu.scrollIntoView({ behavior: "auto" });
 
+	// Hide the content div
+	content.style.display = "none";
+
 	// Add the 'active' class to trigger fade-in effect
 	setTimeout(() => {
 		menu.classList.add("active");
+		menu.style.display = "flex";
 	}, 50); // Small delay to ensure visibility transition works
 });
 

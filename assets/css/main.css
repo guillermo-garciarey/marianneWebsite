@@ -1819,7 +1819,7 @@ body.is-preload #footer {
 }
 
 .menu {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	width: 100%;
 	height: 100vh;
