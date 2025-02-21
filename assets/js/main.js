@@ -356,4 +356,37 @@ document.querySelector(".chevronbutton").addEventListener("click", function () {
 		$window.on("load", function () {
 			$main._show(location.hash.substr(1), true);
 		});
+
+	// My stuff
+	document.querySelectorAll(".menu_item a").forEach((link) => {
+		link.addEventListener("click", function (event) {
+			const targetSection = this.getAttribute("href").substring(1); // Get the section ID
+			const bgDiv = document.getElementById("bg");
+
+			// Updated background images for each section
+			const backgrounds = {
+				intro: "url('../../images/disk1.jpg')",
+				work: "url('../../images/disk2.jpg')",
+				about: "url('../../images/disk3.jpg')",
+				contact: "url('../../images/disk4.jpg')",
+			};
+
+			// Update the CSS variable to change the ::after background
+			if (backgrounds[targetSection]) {
+				bgDiv.style.setProperty("--bg-image", backgrounds[targetSection]);
+			}
+
+			// Allow other scripts to run AFTER background updates
+			setTimeout(() => {
+				document
+					.getElementById(targetSection)
+					.scrollIntoView({ behavior: "smooth" });
+
+				// Place any additional scripts that need to run here
+				console.log(
+					"Background updated, scrolling finished, running other code..."
+				);
+			}, 50); // Small delay ensures smooth execution
+		});
+	});
 })(jQuery);

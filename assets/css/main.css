@@ -1282,11 +1282,18 @@ button {
 	-ms-transition: -ms-transform 0.325s ease-in-out,
 		-ms-filter 0.325s ease-in-out;
 	transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-	background-image: url("https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+	/* background-image: url("https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); */
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	z-index: 1;
+	transition: background-image 0.5s ease-in-out;
+
+	/* Use a CSS variable for the background */
+	background-image: var(
+		--bg-image,
+		url("https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+	);
 }
 
 body.is-article-visible #bg:after {
