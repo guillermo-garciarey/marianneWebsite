@@ -1834,11 +1834,27 @@ body.is-preload #footer {
 	justify-content: start;
 	align-items: end;
 	display: flex;
-	background-image: url("../../images/disk1.jpg");
-	background-position: center;
+	background-image: url("../../images/aboutme.jpg");
+	background-position: top;
 	background-size: cover;
 	padding: 1rem;
+	/* filter: grayscale(100%); */
 }
+
+/* .menu_item::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		to bottom,
+		rgba(83, 145, 199, 0.327),
+		rgba(84, 134, 177, 0.272)
+	);
+	pointer-events: none;
+} */
 
 .menu_item a {
 	color: #ffffff;
@@ -1849,19 +1865,25 @@ body.is-preload #footer {
 }
 
 .menu_item:nth-child(1) {
-	background-image: url("../../images/disk2.jpg");
-	background-position: center;
+	background-image: url("../../images/aboutme.jpg");
+	background-position: 0% 15%;
 	background-size: cover;
 }
 
 .menu_item:nth-child(2) {
-	background-image: url("../../images/disk3.jpg");
-	background-position: center;
+	background-image: url("../../images/services.jpg");
+	background-position: 0% 15%;
 	background-size: cover;
 }
 .menu_item:nth-child(3) {
-	background-image: url("../../images/disk4.jpg");
-	background-position: center;
+	background-image: url("../../images/consultation.jpg");
+	background-position: 0% 15%;
+	background-size: cover;
+}
+
+.menu_item:nth-child(4) {
+	background-image: url("../../images/contact.jpg");
+	background-position: 0% 15%;
 	background-size: cover;
 }
 
@@ -1918,4 +1940,10 @@ body.is-preload #footer {
 html,
 body {
 	overflow: hidden !important;
+}
+
+@media screen and (min-width: 1024px) {
+	.menu {
+		flex-direction: row;
+	}
 }
