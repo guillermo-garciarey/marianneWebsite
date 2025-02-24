@@ -1838,7 +1838,11 @@ body.is-preload #footer {
 	background-position: top;
 	background-size: cover;
 	padding: 1rem;
-	/* filter: grayscale(100%); */
+	filter: grayscale(100%);
+}
+
+.menu_item:hover {
+	filter: none;
 }
 
 /* .menu_item::after {
