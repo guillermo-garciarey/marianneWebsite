@@ -1839,10 +1839,13 @@ body.is-preload #footer {
 	background-size: cover;
 	padding: 1rem;
 	filter: grayscale(100%);
+	transition: filter 0.5s ease, transform 0.5s ease; /* Smooth transition */
 }
 
 .menu_item:hover {
 	filter: none;
+
+	transform: scale(1.05); /* Slight zoom-in effect */
 }
 
 /* .menu_item::after {
