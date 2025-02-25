@@ -36,6 +36,40 @@ updateVH();
 // Update when window resizes (e.g., address bar hides)
 window.addEventListener("resize", updateVH);
 
+document.addEventListener("DOMContentLoaded", function () {
+	const menuItems = document.querySelectorAll(".menu_item");
+	let index = 0;
+
+	function applyEffect() {
+		// Reset all items first
+		menuItems.forEach((item) => {
+			item.style.filter = "";
+			item.style.transform = "";
+		});
+
+		// Apply styles to the current item
+		menuItems[index].style.filter = "none";
+
+		// Move to the next item
+		index = (index + 1) % menuItems.length;
+
+		// Repeat the effect every 1.5 seconds
+		setTimeout(applyEffect, 4500);
+	}
+
+	// Start the cycling effect
+	applyEffect();
+});
+
+// document.querySelectorAll(".menu_item").forEach((item) => {
+// 	item.addEventListener("click", function () {
+// 		const link = this.querySelector("a");
+// 		if (link) {
+// 			window.location.href = link.href;
+// 		}
+// 	});
+// });
+
 (function ($) {
 	var $window = $(window),
 		$body = $("body"),
@@ -367,32 +401,31 @@ window.addEventListener("resize", updateVH);
 	// My stuff
 	document.querySelectorAll(".menu_item a").forEach((link) => {
 		link.addEventListener("click", function (event) {
-			const targetSection = this.getAttribute("href").substring(1); // Get the section ID
+			const targetSection = this.getAttribute("href").substring(1); // Get section ID
 			const bgDiv = document.getElementById("bg");
 
-			// Updated background images for each section
+			// Background images for each section
 			const backgrounds = {
-				intro: "url('../../images/disk1.jpg')",
-				work: "url('../../images/disk2.jpg')",
-				about: "url('../../images/disk3.jpg')",
-				contact: "url('../../images/disk4.jpg')",
+				about: "url('../../images/aboutme.jpg')",
+				services: "url('../../images/services.jpg')",
+				consultation: "url('../../images/consultation.jpg')",
+				contact: "url('../../images/contact.jpg')",
 			};
 
-			// Update the CSS variable to change the ::after background
+			// Update the background if the section exists in our object
 			if (backgrounds[targetSection]) {
 				bgDiv.style.setProperty("--bg-image", backgrounds[targetSection]);
+				bgDiv.style.backgroundSize = "cover"; // Ensure it stays cover
+				bgDiv.style.backgroundPosition = "top"; // Keep the image positioned at the top
 			}
 
-			// Allow other scripts to run AFTER background updates
+			// Allow scripts to run AFTER background updates
 			setTimeout(() => {
 				document
 					.getElementById(targetSection)
 					.scrollIntoView({ behavior: "smooth" });
 
-				// Place any additional scripts that need to run here
-				console.log(
-					"Background updated, scrolling finished, running other code..."
-				);
+				console.log("Background updated, scrolling finished...");
 			}, 50); // Small delay ensures smooth execution
 		});
 	});
