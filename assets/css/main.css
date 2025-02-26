@@ -3,6 +3,9 @@
 
 :root {
 	--vh: 1vh;
+	--color1: rgba(121, 186, 181, 1);
+	--color2: rgba(66, 135, 245, 1);
+	--color3: rgba(64, 102, 99, 0.5);
 }
 
 html,
@@ -1726,7 +1729,7 @@ body.is-preload #header .content .inner {
 	height: 80vh;
 	width: 40rem;
 	max-width: 95%;
-	background-color: rgba(27, 31, 34, 0.85);
+	background-color: var(--color3);
 	border-radius: 4px;
 	opacity: 0;
 }
@@ -1999,4 +2002,31 @@ body {
 		background-position: left;
 		background-size: cover;
 	}
+}
+
+.iteclogo {
+	height: auto;
+	width: 100%;
+	border-radius: 20px;
+	/* background-color: antiquewhite; */
+	display: flex;
+	flex: 1;
+	gap: 20px;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1em;
+	padding-inline: 5px;
+}
+
+.iteclogo img {
+	display: flex;
+	flex: 1;
+	scale: 0.5;
+}
+
+.iteclogo span {
+	display: flex;
+	flex: 1;
+	/* color: #1b1f22; */
+	/* font-weight: 600; */
 }
