@@ -1984,7 +1984,7 @@ body {
 	.menu_item:nth-child(1) {
 		background-image: url("../../images/aboutme.jpg");
 		background-position: 45% 18%;
-		background-size: 490%;
+		background-size: 400%;
 	}
 
 	.menu_item:nth-child(2) {
