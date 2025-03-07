@@ -1243,7 +1243,7 @@ button {
 } */
 
 #bg {
-	--bg-image: url("https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); /* Default image */
+	--bg-image: url("../../images/landingpage.jpeg"); /* Default image */
 
 	position: fixed;
 	top: 0;
@@ -1310,7 +1310,7 @@ button {
 		-ms-filter 0.325s ease-in-out;
 	transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
 	/* background-image: url("https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); */
-	background-position: center;
+	background-position: top;
 	background-size: cover;
 	background-repeat: no-repeat;
 	z-index: 1;
@@ -2057,4 +2057,9 @@ body {
 	padding-left: 0 !important;
 	margin: 0;
 	text-align: center;
+}
+
+.caviar-dreams {
+	font-family: "Caviar Dreams", sans-serif;
+	font-weight: 300;
 }
