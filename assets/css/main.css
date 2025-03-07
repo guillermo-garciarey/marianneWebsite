@@ -1324,6 +1324,11 @@ button {
 	);
 }
 
+/* Initial transform (page load) */
+#bg.loaded::after {
+	transform: scale(1.125) rotate(-10deg);
+}
+
 body.is-article-visible #bg:after {
 	-moz-transform: scale(1.0825);
 	-webkit-transform: scale(1.0825);
