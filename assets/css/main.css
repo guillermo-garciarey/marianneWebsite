@@ -96,8 +96,8 @@ video {
 	font: inherit;
 	vertical-align: baseline;
 	overflow: auto;
-	scroll-snap-type: y mandatory;
-	scroll-snap-align: end;
+	/* scroll-snap-type: y mandatory;
+	scroll-snap-align: end; */
 	/* Hide scrollbar */
 	scrollbar-width: none; /* Firefox */
 	-ms-overflow-style: none; /* IE and Edge */
@@ -904,6 +904,7 @@ ul.actions {
 	list-style: none;
 	margin-left: -1rem;
 	padding-left: 0;
+	justify-content: center;
 }
 
 ul.actions li {
@@ -1200,7 +1201,7 @@ button.primary,
 .button.primary {
 	background-color: #ffffff;
 	color: #1b1f22 !important;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 input[type="submit"].disabled,
@@ -2029,4 +2030,31 @@ body {
 	flex: 1;
 	/* color: #1b1f22; */
 	/* font-weight: 600; */
+}
+
+.margin {
+	margin-bottom: 2rem;
+	scroll-snap-type: none;
+}
+
+.dot-list {
+	list-style-type: disc !important; /* Ensure dots appear */
+	padding-left: 20px; /* Adjust spacing */
+}
+
+.dot-list li {
+	display: list-item !important; /* Forces list behavior */
+}
+
+.dot-list li::before {
+	content: "• ";
+	color: inherit;
+	font-size: 1em;
+	margin-right: 8px;
+}
+
+.socials * {
+	padding-left: 0 !important;
+	margin: 0;
+	text-align: center;
 }

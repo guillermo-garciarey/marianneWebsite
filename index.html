@@ -94,26 +94,54 @@
 				<!-- Work -->
 				<article id="services">
 					<h2 class="major">My Services</h2>
-					<span class="image main"
-						><img
-							src="images/services.jpg"
-							alt=""
-					/></span>
 					<p>
-						Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu,
-						at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent
-						urna nisi, fringila lorem et vehicula lacinia quam. Integer
-						sollicitudin mauris nec lorem luctus ultrices.
+						MBM Fitness is a space I created as a coach, considering the
+						different needs, goals, and health backgrounds of my previous
+						clients.
 					</p>
+
 					<p>
-						Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-						libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-						Pellentesque condimentum sem. In efficitur ligula tate urna.
-						Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-						Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-						libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-						tempus.
+						This is <strong>personal training</strong> — not a pre-designed
+						program, but one that adjusts to you holistically, considering your
+						availability, physical condition, and personality.
 					</p>
+
+					<p>
+						As your coach, I am committed to bringing you into the world of
+						fitness with accountability and a great experience that fits into
+						your lifestyle while helping you reach your goals.
+					</p>
+
+					<p>
+						If you're intermediate or advanced but feel lost on where to start
+						again, I'm here to help you too.
+					</p>
+
+					<h3>What You Get:</h3>
+					<ul class="dot-list">
+						<li>Free consultation</li>
+						<li>No extra gym fees</li>
+						<li>
+							Biometric follow-up, measurements (if required), and nutrition
+							support
+						</li>
+						<li>1-hour training sessions</li>
+						<li>Different training styles to meet your needs</li>
+					</ul>
+
+					<h3>Areas of Focus:</h3>
+					<ul class="dot-list">
+						<li>Body realignment</li>
+						<li>Working around injuries</li>
+						<li>Injury recovery</li>
+						<li>Women's health</li>
+						<li>Weight loss</li>
+						<li>Fine motor recovery</li>
+						<li>
+							Special needs and elderly fitness (adults and kids, facilities to
+							be agreed)
+						</li>
+					</ul>
 				</article>
 
 				<!-- About -->
@@ -138,10 +166,8 @@
 				<!-- Contact -->
 				<article id="contact">
 					<h2 class="major">Contact</h2>
-					<form
-						method="post"
-						action="#"
-					>
+
+					<form id="contact-form">
 						<div class="fields">
 							<div class="field half">
 								<label for="name">Name</label>
@@ -154,9 +180,10 @@
 							<div class="field half">
 								<label for="email">Email</label>
 								<input
-									type="text"
+									type="email"
 									name="email"
 									id="email"
+									required
 								/>
 							</div>
 							<div class="field">
@@ -170,50 +197,48 @@
 						</div>
 						<ul class="actions">
 							<li>
-								<input
-									type="submit"
-									value="Send Message"
+								<button
+									type="button"
 									class="primary"
-								/>
+									onclick="sendEmail()"
+								>
+									Send Message
+								</button>
 							</li>
-							<li>
+							<!-- <li>
 								<input
 									type="reset"
 									value="Reset"
 								/>
-							</li>
+							</li> -->
 						</ul>
 					</form>
-					<ul class="icons">
-						<li>
-							<a
-								href="#"
-								class="icon brands fa-twitter"
-								><span class="label">Twitter</span></a
-							>
-						</li>
-						<li>
-							<a
-								href="#"
-								class="icon brands fa-facebook-f"
-								><span class="label">Facebook</span></a
-							>
-						</li>
-						<li>
-							<a
-								href="#"
-								class="icon brands fa-instagram"
-								><span class="label">Instagram</span></a
-							>
-						</li>
-						<li>
-							<a
-								href="#"
-								class="icon brands fa-github"
-								><span class="label">GitHub</span></a
-							>
-						</li>
-					</ul>
+
+					<div class="socials">
+						<ul class="icons">
+							<li>
+								<a
+									href="#"
+									class="icon brands fa-instagram"
+									><span class="label">Instagram</span></a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="icon brands fa-whatsapp"
+									><span class="label">WhatsApp</span></a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="icon solid fa-phone"
+									><span class="label">Phone</span></a
+								>
+							</li>
+						</ul>
+					</div>
 				</article>
 
 				<!-- Elements -->
@@ -615,5 +640,23 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			function sendEmail() {
+				// Get form values
+				var email = document.getElementById("email").value;
+				var message = document.getElementById("message").value;
+
+				// Construct mailto link
+				var mailtoLink =
+					"mailto:guillermo.garciarey@gmail.com" +
+					"?subject=" +
+					encodeURIComponent("Consultation Request") +
+					"&body=" +
+					encodeURIComponent("Email: " + email + "\n\nMessage:\n" + message);
+
+				// Open default email app
+				window.location.href = mailtoLink;
+			}
+		</script>
 	</body>
 </html>
