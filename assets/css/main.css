@@ -2059,7 +2059,15 @@ body {
 	text-align: center;
 }
 
+@font-face {
+	font-family: "Caviar Dreams";
+	src: url("../../fonts/CaviarDreams.ttf") format("truetype"); /* Correct format */
+	font-weight: normal; /* or you can specify a specific weight if available */
+	font-style: normal;
+}
+
 .caviar-dreams {
 	font-family: "Caviar Dreams", sans-serif;
-	font-weight: 300;
+	font-weight: normal; /* Use normal or 400 if the font supports that */
+	text-transform: none;
 }
