@@ -1271,7 +1271,7 @@ button {
 	}
 }
 
-@media screen and (max-width: 1290px) {
+/* @media screen and (max-width: 1290px) {
 	#bg {
 		transform: scale(1.3);
 	}
@@ -1281,7 +1281,7 @@ button {
 	#bg {
 		transform: scale(1.25);
 	}
-}
+} */
 
 #bg:before,
 #bg:after {
