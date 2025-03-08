@@ -33,32 +33,32 @@ function updateVH() {
 // Set on load
 updateVH();
 
-window.onload = function () {
-	const bgElement = document.getElementById("bg");
+// window.onload = function () {
+// 	const bgElement = document.getElementById("bg");
 
-	// Add the 'loaded' class to the element on page load
-	bgElement.classList.add("loaded");
+// 	// Add the 'loaded' class to the element on page load
+// 	bgElement.classList.add("loaded");
 
-	// Listen for any interaction (e.g., mouse click, key press, etc.)
-	document.body.addEventListener("click", function () {
-		bgElement.classList.remove("loaded"); // Remove the rotation after interaction
+// 	// Listen for any interaction (e.g., mouse click, key press, etc.)
+// 	document.body.addEventListener("click", function () {
+// 		bgElement.classList.remove("loaded"); // Remove the rotation after interaction
 
-		// Add a delay before changing the transform property
-		setTimeout(function () {
-			bgElement.style.setProperty("--bg-transform", "scale(1.125)");
-		}, 1000); // 1000 milliseconds = 1 second
-	});
+// 		// Add a delay before changing the transform property
+// 		setTimeout(function () {
+// 			bgElement.style.setProperty("--bg-transform", "scale(1.125)");
+// 		}, 1000); // 1000 milliseconds = 1 second
+// 	});
 
-	// Optional: Listen for other events like keypress, scroll, etc.
-	document.body.addEventListener("keypress", function () {
-		bgElement.classList.remove("loaded");
+// 	// Optional: Listen for other events like keypress, scroll, etc.
+// 	document.body.addEventListener("keypress", function () {
+// 		bgElement.classList.remove("loaded");
 
-		// Add a delay before changing the transform property
-		setTimeout(function () {
-			bgElement.style.setProperty("--bg-transform", "scale(1.125)");
-		}, 1000); // 1000 milliseconds = 1 second
-	});
-};
+// 		// Add a delay before changing the transform property
+// 		setTimeout(function () {
+// 			bgElement.style.setProperty("--bg-transform", "scale(1.125)");
+// 		}, 1000); // 1000 milliseconds = 1 second
+// 	});
+// };
 
 // Update when window resizes (e.g., address bar hides)
 window.addEventListener("resize", updateVH);

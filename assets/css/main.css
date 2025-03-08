@@ -1243,7 +1243,7 @@ button {
 } */
 
 #bg {
-	--bg-image: url("../../images/landingpage.jpeg"); /* Default image */
+	--bg-image: url("../../images/landingpage.jpg"); /* Default image */
 
 	position: fixed;
 	top: 0;
@@ -1261,8 +1261,26 @@ button {
 	-moz-transform: scale(1);
 	-webkit-transform: scale(1);
 	-ms-transform: scale(1);
-	transform: scale(1);
+	transform: scale(1.4);
 	-webkit-backface-visibility: hidden;
+}
+
+@media screen and (max-width: 870px) {
+	#bg {
+		transform: scale(1.1);
+	}
+}
+
+@media screen and (max-width: 1290px) {
+	#bg {
+		transform: scale(1.3);
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	#bg {
+		transform: scale(1.25);
+	}
 }
 
 #bg:before,
@@ -1322,11 +1340,6 @@ button {
 		--bg-image,
 		url("https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
 	);
-}
-
-/* Initial transform (page load) */
-#bg.loaded::after {
-	transform: scale(1.125) rotate(-10deg);
 }
 
 body.is-article-visible #bg:after {
@@ -1733,7 +1746,7 @@ body.is-preload #header .content .inner {
 	transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
 	padding: 4.5rem 2.5rem 1.5rem 2.5rem;
 	position: relative;
-	height: 80vh;
+	max-height: 80vh;
 	width: 40rem;
 	max-width: 95%;
 	background-color: var(--color3);
