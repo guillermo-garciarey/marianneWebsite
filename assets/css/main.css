@@ -1261,7 +1261,7 @@ button {
 	-moz-transform: scale(1);
 	-webkit-transform: scale(1);
 	-ms-transform: scale(1);
-	transform: scale(1.4);
+	transform: scale(1.5);
 	-webkit-backface-visibility: hidden;
 }
 
