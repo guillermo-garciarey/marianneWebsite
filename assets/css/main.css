@@ -1271,7 +1271,13 @@ button {
 	}
 }
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1800px) {
+	#bg {
+		transform: scale(1.55);
+	}
+}
+
+@media screen and (width: 1470px) and (height: 956px) {
 	#bg {
 		transform: scale(1.55);
 	}
