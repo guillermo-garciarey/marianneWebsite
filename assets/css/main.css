@@ -1261,13 +1261,19 @@ button {
 	-moz-transform: scale(1);
 	-webkit-transform: scale(1);
 	-ms-transform: scale(1);
-	transform: scale(1.5);
+	transform: scale(1.4);
 	-webkit-backface-visibility: hidden;
 }
 
 @media screen and (max-width: 450px) {
 	#bg {
 		transform: scale(1.1);
+	}
+}
+
+@media screen and (min-width: 1900px) {
+	#bg {
+		transform: scale(1.55);
 	}
 }
 
