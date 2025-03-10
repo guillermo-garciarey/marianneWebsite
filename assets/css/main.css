@@ -1271,17 +1271,18 @@ button {
 	}
 }
 
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 1400px) {
 	#bg {
-		transform: scale(1.55);
+		--bg-image: url("../../images/landingpage.jpeg"); /* Default image */
+		transform: scale(1.1);
 	}
 }
 
-@media screen and (width: 1470px) and (height: 956px) {
+/* @media screen and (width: 1470px) and (height: 956px) {
 	#bg {
 		transform: scale(1.55);
 	}
-}
+} */
 
 /* @media screen and (max-width: 1290px) {
 	#bg {
